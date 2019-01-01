@@ -24,7 +24,7 @@ protocol PStack: Collection {
 }
 
 
-class Stack<Type> : PStack {
+public class Stack<Type> : PStack {
     typealias T = Type
     
     private class Node {
@@ -37,10 +37,10 @@ class Stack<Type> : PStack {
     }
     
     
-    var count: Int = 0
+    public var count: Int = 0
     private var head : Node?
     
-    func push(value: Type) {
+    public func push(value: Type) {
         count += 1 
         let node = Node(value: value)
         
@@ -53,7 +53,7 @@ class Stack<Type> : PStack {
         head = node
     }
     
-    func pop() -> Type? {
+    public func pop() -> Type? {
         if let head = head {
             let value = head.value
             self.head = head.below
@@ -64,7 +64,7 @@ class Stack<Type> : PStack {
         return nil
     }
     
-    func peek() -> Type? {
+    public func peek() -> Type? {
         if let head = head {
             return head.value
         }

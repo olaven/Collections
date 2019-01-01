@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Queue<Type>: PQueue {
+public class Queue<Type>: PQueue {
     
     
     private class Node {
@@ -23,11 +23,12 @@ class Queue<Type>: PQueue {
     
     typealias T = Type
     
-    var count: Int = 0
+    public var count: Int = 0
+    
     private var front: Node?
     private var back: Node?
     
-    func enqueue(value: Type) {
+    public func enqueue(value: Type) {
         
         let node = Node(value: value)
         count += 1
@@ -42,7 +43,7 @@ class Queue<Type>: PQueue {
         }
     }
     
-    func dequeue() -> Type? {
+    public func dequeue() -> Type? {
         let value = front?.value
         if let front = front {
             self.front = front.previous
@@ -52,7 +53,7 @@ class Queue<Type>: PQueue {
         return value 
     }
     
-    func peek() -> Type? {
+    public func peek() -> Type? {
         return front?.value
     }
     
