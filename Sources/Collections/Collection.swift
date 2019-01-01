@@ -16,7 +16,7 @@ extension Collection {
     
     /// True if collection empty,
     /// false if not
-    func isEmpty() -> Bool {
+    public func isEmpty() -> Bool {
         return count == 0
     }
 }
