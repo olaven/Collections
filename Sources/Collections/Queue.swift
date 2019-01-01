@@ -49,6 +49,11 @@ public class Queue<Type>: PQueue {
         let value = front?.value
         if let front = front {
             self.front = front.previous
+            
+            if count == 1 {
+                back = nil 
+            }
+            
             count -= 1
         }
         
