@@ -36,7 +36,7 @@ public class Stack<Type> : PStack {
         }
     }
     
-    
+    public init() {}
     public var count: Int = 0
     private var head : Node?
     

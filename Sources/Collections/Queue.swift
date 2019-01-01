@@ -22,6 +22,8 @@ public class Queue<Type>: PQueue {
     
     
     typealias T = Type
+
+    public init() {}
     
     public var count: Int = 0
     
